@@ -1,21 +1,22 @@
 import React from "react";
-import {Container} from 'semantic-ui-react';
+import { Container } from "semantic-ui-react";
 import Head from "next/head";
-import Header from './Header'; 
+import Header from "./Header";
 
 const Layout = (props) => {
-  return(
-  <Container>
-  <Head>
-  <link
-    async
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
-  />
-  </Head>
-    <Header/>
-    {props.children}
-    <h1>I am footer</h1>
-  </Container>)
+  return (
+    <div>
+      <Container>
+        <Head>
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
+          ></link>
+        </Head>
+        <Header />
+        {props.children}
+      </Container>
+    </div>
+  );
 };
 export default Layout;
